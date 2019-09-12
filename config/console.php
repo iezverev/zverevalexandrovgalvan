@@ -14,6 +14,9 @@ $config = [
         '@tests' => '@app/tests',
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\AuthorRule',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

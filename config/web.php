@@ -22,6 +22,10 @@ $config = [
         ],
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\AuthorRule',
+            'defaultRoles' => ['admin', 'BRAND', 'TALENT'], // Здесь нет роли "guest", т.к. эта роль виртуальная и не присутствует в модели UserExt
+        ],
         'authClientCollection' => [
             'class'   => \yii\authclient\Collection::className(),
             'clients' => [
