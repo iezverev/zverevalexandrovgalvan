@@ -14,9 +14,6 @@ $config = [
         '@tests' => '@app/tests',
     ],
     'components' => [
-        'authManager' => [
-            'class' => 'yii\rbac\AuthorRule',
-        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -31,6 +28,11 @@ $config = [
         'db' => $db,
 
     ],
+	'controllerMap' => [
+    'migration' => [
+        'class' => 'bizley\migration\controllers\MigrationController',
+    	],
+	],
     'modules' => [
         'rbac' => 'dektrium\rbac\RbacConsoleModule',
         'user' => [
